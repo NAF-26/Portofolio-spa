@@ -451,3 +451,41 @@ span {
     transform: translateX(0);
   }
 }
+
+.about {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* biar ada jarak */
+  flex-wrap: wrap; /* Biar turun kalau layar sempit */
+  gap: 2rem;
+}
+
+.about-content {
+  flex: 1 1 400px; /* Bisa mengecil sampai 400px */
+  max-width: 600px; /* Biar teks gak terlalu melebar */
+}
+
+.about-content p {
+  font-size: 2rem; /* default lebih kecil dari 3rem */
+  line-height: 1.6;
+}
+
+@media (max-width: 991px) {
+  .about {
+    flex-direction: column-reverse;
+    text-align: center;
+  }
+
+  .about-content {
+    padding: 0 2rem;
+  }
+
+  .about-content p {
+    font-size: 1.8rem; /* lebih kecil di HP */
+  }
+
+  .about-img img {
+    width: 70vw;
+    margin-top: 2rem;
+  }
+}
